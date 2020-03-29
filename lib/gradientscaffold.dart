@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 /// Material Gradient Scaffold.
 class GradientScaffold extends StatelessWidget {
-  GradientScaffold(this.scaffold, this.gradient);
+  GradientScaffold({this.scaffold,this.gradient});
   final scaffold;
   final gradient;
   @override
@@ -30,7 +30,7 @@ class GradientScaffold extends StatelessWidget {
 
 /// Cupertino Page Gradient Scaffold.
 class CupertinoPageGradientScaffold extends StatelessWidget {
-  CupertinoPageGradientScaffold(this.scaffold, this.gradient);
+  CupertinoPageGradientScaffold({this.scaffold, this.gradient});
   final scaffold;
   final gradient;
   @override

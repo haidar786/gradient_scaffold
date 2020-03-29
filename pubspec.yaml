@@ -1,8 +1,8 @@
-name: gradientscaffold
-description: A new Flutter package.
-version: 0.0.1
-author:
-homepage:
+name: gradientscaffoldwidget
+description: A gradient scaffold flutter widget.
+version: 0.0.2
+author: Hussnain Haidar <hussnainhaidar1@gmail.com>
+homepage: https://github.com/haidar786/gradient_scaffold
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
