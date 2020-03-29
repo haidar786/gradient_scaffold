@@ -1,3 +1,5 @@
+
+```
 import 'package:flutter/material.dart';
 import 'package:gradientscaffold/gradientscaffold.dart';
 
@@ -31,3 +33,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+```
