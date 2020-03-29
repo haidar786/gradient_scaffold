@@ -1,14 +1,33 @@
-# gradientscaffold
+import 'package:flutter/material.dart';
+import 'package:gradientscaffold/gradientscaffold.dart';
 
-A new Flutter package.
+void main() {
+  runApp(MyApp());
+}
 
-## Getting Started
-
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext buildContext) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
+      home: GradientScaffold(
+        gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [Colors.red, Colors.purple]),
+        scaffold: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            elevation: 0.0,
+            backgroundColor: Colors.transparent,
+            title: Text("Gradient Screen"),
+          ),
+          body: Center(
+            child: Text("Hello Gradient World"),
+          ),
+        ),
+      ),
+    );
+  }
+}
