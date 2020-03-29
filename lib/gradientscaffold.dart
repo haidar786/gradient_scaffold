@@ -1,11 +1,13 @@
 library gradientscaffold;
 
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Material Gradient Scaffold.
 class GradientScaffold extends StatelessWidget {
-  GradientScaffold({this.scaffold,this.gradient});
+  GradientScaffold({this.scaffold, this.gradient});
   final scaffold;
   final gradient;
   @override
@@ -18,7 +20,12 @@ class GradientScaffold extends StatelessWidget {
                 ? LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
-                    colors: [Colors.red, Colors.purple])
+                    colors: [
+                        Colors.primaries[
+                            Random().nextInt(Colors.primaries.length)],
+                        Colors.primaries[
+                            Random().nextInt(Colors.primaries.length)],
+                      ])
                 : gradient,
           ),
           child: scaffold != null ? scaffold : SizedBox.shrink(),
@@ -43,8 +50,12 @@ class CupertinoPageGradientScaffold extends StatelessWidget {
                 ? LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
-                    colors: [Colors.red, Colors.purple],
-                  )
+                    colors: [
+                        Colors.primaries[
+                            Random().nextInt(Colors.primaries.length)],
+                        Colors.primaries[
+                            Random().nextInt(Colors.primaries.length)],
+                      ])
                 : gradient,
           ),
           child: scaffold != null ? scaffold : SizedBox.shrink(),
